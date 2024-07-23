@@ -1,0 +1,96 @@
+<div class="content">
+    <!-- Form Element -->
+    <form (ngSubmit)="onSubmit()" #surveyForm="ngForm" id="surveyForm" autocomplete="on">
+        <!--Text Input Elements div for Username, Street Address, ZIP, Phone Number, Email, URL, and Date of Survey  -->
+        <div class="mb-3">
+            <label for="firstname" class="form-label">First Name <span class="required">*</span></label>
+            <input type="text" class="form-control" id="firstname" [(ngModel)]="survey.firstName" name="firstname" autocomplete="name" required
+                autofocus placeholder="Enter First Name">
+            <label for="lastname" class="form-label">Last Name <span class="required">*</span></label>
+            <input type="text" class="form-control" id="lastname" [(ngModel)]="survey.lastName" name="lastname" autocomplete="name" required
+                autofocus placeholder="Enter Last Name">
+            <label for="street_address" class="form-label">Street Address<span class="required">*</span></label>
+            <input type="text" class="form-control" id="street_address" [(ngModel)]="survey.streetAddress" name="street_address" required
+                placeholder="Enter Street Address">
+            <label for="city" class="form-label">City <span class="required">*</span></label>
+            <input type="text" class="form-control" id="city" [(ngModel)]="survey.city" name="city" required placeholder="Enter City">
+            <label for="state" class="form-label">State <span class="required">*</span></label>
+            <input type="text" class="form-control" id="state" [(ngModel)]="survey.state" name="state" required placeholder="Enter State">
+            <label for="zip" class="form-label">Zip <span class="required">*</span></label>
+            <input type="tel" pattern="[0-9]{5}" class="form-control" id="zip" [(ngModel)]="survey.zip" name="zip" required
+                placeholder="12345">
+            <label for="phone_number" class="form-label">Phone Number <span class="required">*</span></label>
+            <input type="tel" pattern="[0-9]{10}" class="form-control" id="phone_number" [(ngModel)]="survey.telephone" name="phone_number"
+                autocomplete="tel" required placeholder="1234567890">
+            <label for="email" class="form-label">Email <span class="required">*</span></label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="survey.email" name="email" autocomplete="email" required
+                placeholder="example@example.com">
+            <label for="survey_date" class="form-label">Date of Survey <span class="required">*</span></label>
+            <input type="date" class="form-control" id="survey_date" [(ngModel)]="survey.dateOfSurvey" name="survey" required>
+        </div>
+
+        <!-- Checkboxes Input div for "What did you like most about the campus?"-->
+        <div class="mb-3">
+            <p class="form-label">What did you like most about the campus? <span class="required">*</span></p>
+            <p>(Please select at least two options)</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="students" name="likes" value="students">
+                <label class="form-check-label" for="students">Students</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="location" name="likes" value="location">
+                <label class="form-check-label" for="location">Location</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="campus" name="likes" value="campus">
+                <label class="form-check-label" for="campus">Campus</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="atmosphere">
+                <label class="form-check-label" for="atmosphere">Atmosphere</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="dorm" name="likes" value="dorm">
+                <label class="form-check-label" for="dorm">Dorm Rooms</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="sports" name="likes" value="sports">
+                <label class="form-check-label" for="sports">Sports</label>
+            </div>
+        </div>
+
+        <!-- Radio Input div for "How did you hear about us?"-->
+        <div class="mb-3">
+            <p class="form-label">How did you hear about us? <span class="required">*</span></p>
+            <div class="form-check" *ngFor="let h of hear">
+                <input class="form-check-input" type="radio" name="source" id="hear_answer_{{h.value}}" [value]="h.value" required>
+                <label class="form-check-label" for="hear_answer_{{h.value}}">{{h.value}}</label>
+            </div>
+        </div>
+
+        <!-- Additional Comments textarea Input div-->
+        <div class="mb-3">
+            <label for="comments" class="form-label">Additional Comments</label>
+            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+        </div>
+
+        <!-- Dropdown List Input div for "How likely are you to recommend this school to other
+                prospective students?"-->
+        <div class="mb-3">
+            <label for="likelihood" class="form-label">How likely are you to recommend this school to other
+                prospective students? <span class="required">*</span></label>
+            <select class="form-control" id="likelihood" name="likelihood" required>
+                <option *ngFor="let like of likelihood" [value]=""like>{{ like }}</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- Submit Button for the form -->
+        <!-- <button type="submit" class="btn btn-primary" [disabled]="!surveyForm.form.valid">Submit</button> -->
+        <button type="submit" class="btn btn-primary">Submit</button> 
+
+        <!-- Reset Button for the form -->
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">Cancel</button>
+    </form>
+</div>

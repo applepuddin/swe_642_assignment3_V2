@@ -1,0 +1,44 @@
+/* Table elements Styling */
+
+/* td {
+    color: green;
+}
+
+th {
+    color: #FFCC33;
+    border: 1px solid black;
+
+}
+thead{
+    border: 1px solid black;
+}
+tbody{
+        border: 1px solid black;
+
+}
+
+tr{
+    border: 1px solid black;
+
+}
+td {
+    border: 1px solid black;
+
+} */
+
+h2 {
+    color: aliceblue;
+}
+.content {
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.heading-box {
+    border: 5px solid #006633;
+    box-shadow: 0 5px 10px #FFCC33;
+    padding: 10px;
+    background-color: #006633;
+    margin-top: 20px;
+
+}

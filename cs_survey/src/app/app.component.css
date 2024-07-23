@@ -1,0 +1,99 @@
+/* GMU Green color for h1 and h2 elements */
+h1 {
+    color: #f7f7f7;
+}
+
+h2 {
+    color: #f7f7f7;
+}
+
+/* Light Gray Page Background color */
+body {
+    background-color: #f0f0f0ce;
+}
+
+/* Heading Box Styling Class */
+.heading-box {
+    border: 5px solid #006633;
+    box-shadow: 0 5px 10px #FFCC33;
+    padding: 10px;
+}
+
+/* Page Content Styling Class */
+.content {
+    padding: 30px;
+    background-color: aliceblue;
+}
+
+/* Required Inputs Styling Class */
+.required {
+    color: red;
+}
+
+/* Table elements Styling */
+table {
+    border: 1px solid;
+}
+
+th {
+    border-color: #FFCC33;
+}
+
+tr {
+    border-color: #FFCC33;
+}
+
+/* Input elements Styling */
+input,
+textarea {
+    margin-bottom: 10px;
+}
+
+/* Navbar Styling */
+.nav-green {
+    background-color: #006633;
+}
+.nav-text-yellow{
+    color: #FFCC33; 
+}
+
+/* Greeting Styling */
+.greeting{
+    color: #006633;
+}
+
+/* Error message Styling */
+.error{
+    color: #f80202;
+}
+
+/* Output field Styling */
+output{
+    height: 35px;
+    margin-bottom: 10px;
+
+  }
+
+/* City and State span Styling */
+.zip-data-span {
+    display: block;
+    width: 300px;
+    padding: 13px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    
+  }
+  .links a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .links a:hover {
+    background-color: #0056b3;
+  }

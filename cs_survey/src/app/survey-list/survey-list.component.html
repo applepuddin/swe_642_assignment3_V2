@@ -1,0 +1,48 @@
+<div class="heading-box">
+    <h1 style="color: white">Survey List</h1>
+</div>
+<div class ="container-fluid content">
+<table class ="table table-striped ">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZIP</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Survey Date</th>
+            <th>What did you like most about the campus?</th>
+            <th>How did you hear about us?</th>
+            <th>How likely are you to recommend this school to other prospective students?</th>
+            <th>Comments</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let survey of surveys" >
+            <td>{{ survey.firstName }}</td>
+            <td>{{ survey.lastName }}</td>
+            <td>{{ survey.streetAddress }}</td>
+            <td>{{ survey.city }}</td>
+            <td>{{ survey.state }}</td>
+            <td>{{ survey.zip }}</td>
+            <td>{{ survey.telephone }}</td>
+            <td>{{ survey.email }}</td>
+            <td>{{ survey.dateOfSurvey }}</td>
+            <td>{{ survey.likedMost }}</td>
+            <td>{{ survey.interestSource }}</td>
+            <td>{{ survey.recommendationLikelihood }}</td>
+            <td>{{ survey.additionalComments }}</td>
+            <td>
+                <button (click) = "updateSurvey(survey.id)" class="btn btn-primary"> Update </button>
+                <button (click) = "deleteSurvey(survey.id)" class="btn btn-danger"style ="margin-left: 5px"> Delete </button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+</div>
