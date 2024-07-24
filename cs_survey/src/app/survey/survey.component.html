@@ -63,7 +63,7 @@
         <div class="mb-3">
             <p class="form-label">How did you hear about us? <span class="required">*</span></p>
             <div class="form-check" *ngFor="let h of hear">
-                <input class="form-check-input" type="radio" name="source" id="hear_answer_{{h.value}}" [value]="h.value" required>
+                <input class="form-check-input" type="radio" name="source" id="hear_answer_{{h.value}}" [value]="h.value"  [(ngModel)]="survey.interestSource" required>
                 <label class="form-check-label" for="hear_answer_{{h.value}}">{{h.value}}</label>
             </div>
         </div>
@@ -71,7 +71,7 @@
         <!-- Additional Comments textarea Input div-->
         <div class="mb-3">
             <label for="comments" class="form-label">Additional Comments</label>
-            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+            <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="survey.additionalComments"></textarea>
         </div>
 
         <!-- Dropdown List Input div for "How likely are you to recommend this school to other
@@ -79,8 +79,8 @@
         <div class="mb-3">
             <label for="likelihood" class="form-label">How likely are you to recommend this school to other
                 prospective students? <span class="required">*</span></label>
-            <select class="form-control" id="likelihood" name="likelihood" required>
-                <option *ngFor="let like of likelihood" [value]=""like>{{ like }}</option>
+            <select class="form-control" id="likelihood" name="likelihood" required  [(ngModel)]="survey.recommendationLikelihood">
+                <option *ngFor="let like of likelihood" [value]="like">{{ like }}</option>
             </select>
         </div>
 
