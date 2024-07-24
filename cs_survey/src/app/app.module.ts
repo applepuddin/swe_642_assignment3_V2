@@ -10,7 +10,7 @@ import { UpdateSurveyComponent } from './update-survey/update-survey.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 //import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [provideHttpClient(), provideClientHydration()],
   //bootstrap: [AppComponent]

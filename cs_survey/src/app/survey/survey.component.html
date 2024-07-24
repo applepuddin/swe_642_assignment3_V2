@@ -1,6 +1,6 @@
 <div class="content">
     <!-- Form Element -->
-    <form (ngSubmit)="onSubmit()" #surveyForm="ngForm" id="surveyForm" autocomplete="on">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" #surveyForm="ngForm" id="surveyForm" autocomplete="on">
         <!--Text Input Elements div for Username, Street Address, ZIP, Phone Number, Email, URL, and Date of Survey  -->
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name <span class="required">*</span></label>
@@ -33,29 +33,9 @@
         <div class="mb-3">
             <p class="form-label">What did you like most about the campus? <span class="required">*</span></p>
             <p>(Please select at least two options)</p>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="students" name="likes" value="students">
-                <label class="form-check-label" for="students">Students</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="location" name="likes" value="location">
-                <label class="form-check-label" for="location">Location</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="campus" name="likes" value="campus">
-                <label class="form-check-label" for="campus">Campus</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="atmosphere">
-                <label class="form-check-label" for="atmosphere">Atmosphere</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="dorm" name="likes" value="dorm">
-                <label class="form-check-label" for="dorm">Dorm Rooms</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="sports" name="likes" value="sports">
-                <label class="form-check-label" for="sports">Sports</label>
+            <div class="form-check" *ngFor="let check of checkboxes; let i = index">
+                <input class="form-check-input" type="checkbox" [value]="check.value" (change)="onCheckboxChange($event)" id="check_{{check.name}}" name="likes">
+                <label class="form-check-label" for="check_{{check.name}}">{{check.name}}</label>
             </div>
         </div>
 
@@ -63,7 +43,7 @@
         <div class="mb-3">
             <p class="form-label">How did you hear about us? <span class="required">*</span></p>
             <div class="form-check" *ngFor="let h of hear">
-                <input class="form-check-input" type="radio" name="source" id="hear_answer_{{h.value}}" [value]="h.value" required>
+                <input class="form-check-input" type="radio" name="source" [(ngModel)]="survey.interestSource" id="hear_answer_{{h.value}}" [value]="h.value" required>
                 <label class="form-check-label" for="hear_answer_{{h.value}}">{{h.value}}</label>
             </div>
         </div>
@@ -71,7 +51,7 @@
         <!-- Additional Comments textarea Input div-->
         <div class="mb-3">
             <label for="comments" class="form-label">Additional Comments</label>
-            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+            <textarea class="form-control" id="comments" [(ngModel)]="survey.additionalComments" name="comments" rows="3"></textarea>
         </div>
 
         <!-- Dropdown List Input div for "How likely are you to recommend this school to other
@@ -80,7 +60,7 @@
             <label for="likelihood" class="form-label">How likely are you to recommend this school to other
                 prospective students? <span class="required">*</span></label>
             <select class="form-control" id="likelihood" name="likelihood" required>
-                <option *ngFor="let like of likelihood" [value]=""like>{{ like }}</option>
+                <option *ngFor="let like of likelihood" [(ngModel)]="survey.recommendationLikelihood">{{ like }}</option>
             </select>
         </div>
 
