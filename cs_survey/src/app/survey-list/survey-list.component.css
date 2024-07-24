@@ -1,30 +1,10 @@
 /* Table elements Styling */
 
-/* td {
-    color: green;
-}
-
-th {
-    color: #FFCC33;
-    border: 1px solid black;
-
-}
-thead{
-    border: 1px solid black;
-}
-tbody{
-        border: 1px solid black;
-
-}
-
-tr{
-    border: 1px solid black;
-
-}
 td {
-    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
 
-} */
 
 h2 {
     color: aliceblue;
@@ -41,4 +21,8 @@ h2 {
     background-color: #006633;
     margin-top: 20px;
 
+}
+
+button{
+    width: 100px;
 }
