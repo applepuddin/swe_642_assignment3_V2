@@ -34,27 +34,27 @@
             <p class="form-label">What did you like most about the campus? <span class="required">*</span></p>
             <p>(Please select at least two options)</p>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="students" name="likes" value="students">
+                <input class="form-check-input" type="checkbox" id="students" name="likes" value="Students" [(ngModel)]="likes.Students">
                 <label class="form-check-label" for="students">Students</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="location" name="likes" value="location">
+                <input class="form-check-input" type="checkbox" id="location" name="likes" value="Location" [(ngModel)]="likes.Location">
                 <label class="form-check-label" for="location">Location</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="campus" name="likes" value="campus">
+                <input class="form-check-input" type="checkbox" id="campus" name="likes" value="Campus" [(ngModel)]="likes.Campus">
                 <label class="form-check-label" for="campus">Campus</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="atmosphere">
+                <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="Atmosphere" [(ngModel)]="likes.Atmosphere">
                 <label class="form-check-label" for="atmosphere">Atmosphere</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="dorm" name="likes" value="dorm">
-                <label class="form-check-label" for="dorm">Dorm Rooms</label>
+                <input class="form-check-input" type="checkbox" id="dorm" name="likes" value="Dorms" [(ngModel)]="likes.Dorms">
+                <label class="form-check-label" for="dorm">Dorm</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="sports" name="likes" value="sports">
+                <input class="form-check-input" type="checkbox" id="sports" name="likes" value="Sports" [(ngModel)]="likes.Sports">
                 <label class="form-check-label" for="sports">Sports</label>
             </div>
         </div>
