@@ -30,6 +30,8 @@ export class UpdateSurveyComponent implements OnInit {
     {value:'Internet'}, 
     {value:'Other'}
   ];
+  likes:any ={
+  }
   
   ngOnInit(): void {
 
@@ -42,6 +44,16 @@ export class UpdateSurveyComponent implements OnInit {
   }
 
   onSubmit(){
+    let likeKeys = Object.keys(this.likes)
+    let likes: string[] = [];
+    likeKeys.forEach((k) => {
+    if (this.likes[k]){
+      likes.push(k);
+    }
+    })
+    console.log(likes);
+
+    this.survey.likedMost = likes;
     this.surveyService.updateSurvey(this.id, this.survey).subscribe( data => {
       this.goToSurveyList();
     }, error => console.log(error));
