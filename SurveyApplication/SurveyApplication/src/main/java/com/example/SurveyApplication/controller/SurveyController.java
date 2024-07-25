@@ -1,3 +1,6 @@
+// Handles HTTP requests and routes them to the appropriate services. It includes endpoints for submitting a new survey and retrieving all surveys.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 package com.example.SurveyApplication.controller;
 
 import com.example.SurveyApplication.exception.ResourceNotFoundException;
