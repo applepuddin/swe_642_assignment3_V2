@@ -1,3 +1,6 @@
+// Configures the application's routes, linking paths to components such as home, survey form, survey list, and update survey form, with the root path redirecting to the home page.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
