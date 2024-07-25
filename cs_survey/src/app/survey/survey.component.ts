@@ -1,3 +1,6 @@
+// Defines the SurveyComponent, managing the survey form submission and data handling. Utilizes SurveyService for saving surveys and Router for navigation.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Component, OnInit } from '@angular/core';
 import { Survey } from '../survey';
 import { CommonModule } from '@angular/common';
