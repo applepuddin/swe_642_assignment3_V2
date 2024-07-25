@@ -1,3 +1,6 @@
+// Defines the SurveyListComponent, which fetches and displays a list of surveys. Provides methods to update and delete surveys using SurveyService.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Component, OnInit } from '@angular/core';
 import { Survey } from '../survey';
 import { CommonModule } from '@angular/common';
