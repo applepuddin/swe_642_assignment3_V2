@@ -1,3 +1,6 @@
+// Extends JpaRepository and provides mechanisms for CRUD operations and database interactions. Manages survey entities and provides methods to save and fetch survey data.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 package com.example.SurveyApplication.repository;
 
 import com.example.SurveyApplication.model.Survey;
