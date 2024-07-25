@@ -1,3 +1,6 @@
+// Main module of the application, importing necessary Angular modules and configuring the application's root module.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common'; 
