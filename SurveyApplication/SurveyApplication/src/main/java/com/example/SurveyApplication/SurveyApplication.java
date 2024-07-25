@@ -1,3 +1,6 @@
+// The entry point of the Spring Boot application, containing the main method to bootstrap the application.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 package com.example.SurveyApplication;
 
 import org.springframework.boot.SpringApplication;
