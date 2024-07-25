@@ -1,3 +1,6 @@
+// Unit tests for the UpdateSurveyComponent. Verifies the component's creation and basic functionality.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UpdateSurveyComponent } from './update-survey.component';
