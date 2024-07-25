@@ -1,3 +1,6 @@
+// This class serves as the core entity representing the survey data. It includes fields such as first name, last name, street address, city, state, zip, telephone number, email, date of survey, liked aspects (checkboxes), interest source (radio buttons), recommendation likelihood (dropdown), and additional comments.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 package com.example.SurveyApplication.model;
 
 import jakarta.persistence.Entity;
