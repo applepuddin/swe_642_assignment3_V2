@@ -1,3 +1,6 @@
+// Defines the UpdateSurveyComponent for editing existing surveys. Utilizes SurveyService to fetch and update survey data and Router for navigation.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Component, OnInit } from '@angular/core';
 import { Survey } from '../survey';
 import { ActivatedRoute } from '@angular/router';
