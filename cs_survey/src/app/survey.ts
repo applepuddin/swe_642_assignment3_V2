@@ -1,3 +1,6 @@
+// This file defines the Survey class, which represents the data model for a student survey. It includes properties for personal information, feedback, and survey metadata. The class also includes a method to retrieve the survey ID.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 export class Survey {
     constructor(
         //private id: number = 0,
