@@ -1,3 +1,6 @@
+// Defines the HomeComponent, providing navigation to the survey form and survey list. Uses the Router for navigating between routes.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
