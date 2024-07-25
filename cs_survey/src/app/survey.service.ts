@@ -1,3 +1,6 @@
+// Used to get all surveys to populate the Survey List, to save a survey when a user submits a survey, edit a survey when a user performs the “edit” action on the survey list page, and delete a survey when a user performs the “delete” action on the survey list.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
