@@ -1,3 +1,6 @@
+// Unit tests for the AppComponent. Verifies its creation, title property, and rendered output.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
