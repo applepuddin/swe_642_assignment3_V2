@@ -1,3 +1,6 @@
+// Main component managing navigation and initializing event listeners for the Angular application, using RouterOutlet and NgIf directives.
+// Group: Amin Moujahid, Jack Bedinger, Allen Xavier Peter, Vishal Reddy Basani
+
 import { Component, OnInit} from '@angular/core';
 import { RouterOutlet , Router, NavigationEnd} from '@angular/router';
 import {NgIf} from '@angular/common';
